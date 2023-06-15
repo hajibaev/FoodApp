@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CafeTestApp</string>
+    <string name="screen_home_text">Главная</string>
+    <string name="screen_search_text">Поиск</string>
+    <string name="screen_basket_text">Корзина</string>
+    <string name="screen_account_text">Аккаунт </string>
+<!--    <string name="search">Search </string>-->
+
+
+<!--    <style name="TopCornerRadius" parent="@style/Widget.MaterialComponents.CardView">-->
+<!--        <item name="cornerFamily">rounded</item>-->
+<!--        <item name="cornerSizeTopLeft">37dp</item>-->
+<!--        <item name="cornerSizeTopRight">37dp</item>-->
+<!--    </style>-->
+</resources>

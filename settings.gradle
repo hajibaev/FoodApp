@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url("https://jcenter.bintray.com") }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.google.com' }
+    }
+}
+
+rootProject.name = "CafeTestApp"
+include ':app'
+include ':data'
+include ':domain'
+include ':core'
+include ':core:common'
+include ':core:common:common-api'
+include ':core:ui-core'
+include ':core:common:common-impl'

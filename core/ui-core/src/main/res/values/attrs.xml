@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="card_background" formant="reference|color" />
+
+    <attr name="card_blue_background" formant="reference|color" />
+
+</resources>

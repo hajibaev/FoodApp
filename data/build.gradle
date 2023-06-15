@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.data'
+    compileSdk targetAndroidSdk
+
+    defaultConfig {
+        minSdk minAndroidSdk
+        targetSdk targetAndroidSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation project(Modules.Domain)
+    implementation project(Modules.Core.CommonApi)
+
+
+    // Parse-SDK-Android
+    implementation Libs.Parse.ParseAndroid
+
+    //Networking
+    implementation Libs.Squareup.Retrofit2
+    implementation Libs.Squareup.Retrofit2Gson
+    implementation Libs.Squareup.OkHttp3
+    implementation Libs.Squareup.LoggingInterceptor
+
+    //Room
+    implementation Libs.Android.RoomKtx
+    kapt Libs.Android.RoomCompiler
+
+    // Coroutines
+    implementation Libs.JetBrains.CoroutinesCore
+    implementation Libs.JetBrains.CoroutinesAndroid
+
+    androidTestImplementation Libs.Android.ArchCoreTesting
+
+
+}

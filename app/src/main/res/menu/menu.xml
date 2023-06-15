@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/screen_home"
+        android:icon="@drawable/home"
+        android:title="@string/screen_home_text" />
+    <item
+        android:id="@+id/screen_search"
+        android:icon="@drawable/search_normal"
+        android:title="@string/screen_search_text" />
+    <item
+        android:id="@+id/screen_basket"
+        android:icon="@drawable/bag"
+        android:title="@string/screen_basket_text" />
+    <item
+        android:id="@+id/screen_profile"
+        android:icon="@drawable/profile_circle"
+        android:title="@string/screen_account_text" />
+
+
+</menu>

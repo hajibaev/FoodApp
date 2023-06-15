@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/screen_home">
+
+    <fragment
+        android:id="@+id/screen_home"
+        android:name="com.example.cafetestapp.ui.screen_home.FragmentHomeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/action_screen_home_to_fragmentDishes"
+            app:destination="@id/fragmentDishes" />
+    </fragment>
+    <fragment
+        android:id="@+id/screen_basket"
+        android:name="com.example.cafetestapp.ui.screen_basket.FragmentBasket"
+        android:label="fragment_basket"
+        tools:layout="@layout/fragment_basket" />
+    <!--    <fragment-->
+    <!--        android:id="@+id/screen_search"-->
+    <!--        android:name="com.example.cafetestapp.ui.screen_search.FragmentSearch"-->
+    <!--        android:label="fragment_search"-->
+    <!--        tools:layout="@layout/fragment_search" />-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/screen_profile"-->
+    <!--        android:name="com.example.cafetestapp.ui.screen_profile.FragmentProfile"-->
+    <!--        android:label="fragment_profile"-->
+    <!--        tools:layout="@layout/fragment_profile" />-->
+    <fragment
+        android:id="@+id/fragmentDishes"
+        android:name="com.example.cafetestapp.ui.screen_dishes.FragmentDishes"
+        android:label="fragment_dishes"
+        tools:layout="@layout/fragment_dishes">
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/screen_profile"
+        android:name="com.example.cafetestapp.ui.screen_profile.FragmentProfile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/screen_search"
+        android:name="com.example.cafetestapp.ui.screen_search.FragmentSearch"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
