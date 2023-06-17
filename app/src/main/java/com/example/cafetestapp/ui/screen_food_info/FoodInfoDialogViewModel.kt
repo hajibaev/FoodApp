@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 class FoodInfoDialogViewModel(
     id: String,
     private val saveFoodForBasketUseCase: SaveFoodForBasketUseCase,
-        private val fetchAllDishesScreenItemsUseCase: FetchAllDishesScreenItemsUseCase,
+    private val fetchAllDishesScreenItemsUseCase: FetchAllDishesScreenItemsUseCase,
     private val saveMapper: Mapper<DishesUi, DishesDomain>,
     private val mapFromDishesDomainToUi: Mapper<DishesDomain, DishesUi>
 ) : ViewModel() {

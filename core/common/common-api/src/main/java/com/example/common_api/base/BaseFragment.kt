@@ -22,7 +22,6 @@ abstract class BaseFragment<V : ViewBinding, VM : BaseViewModel>(
 
     protected fun binding(): V = checkNotNull(viewBinding)
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -61,11 +60,5 @@ abstract class BaseFragment<V : ViewBinding, VM : BaseViewModel>(
     override fun onDestroyView() {
         super.onDestroyView()
         viewBinding = null
-    }
-
-    companion object {
-        const val COLLAPSED = 1f
-        const val EXPANDED = 0f
-        const val DEFAULT_ITEMS_ANIMATOR_DURATION = 500L
     }
 }

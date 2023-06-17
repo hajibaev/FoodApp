@@ -38,8 +38,11 @@ class FragmentBasketViewModel(
         }.stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
 
-    fun getAllPriceFromBasket() = getAllDishes.value.forEach {
-        _totalPrice.value += it.price
+    fun getAllPriceFromBasket() {
+        _totalPrice.value = 0
+        getAllDishes.value.forEach {
+            _totalPrice.value += it.price
+        }
     }
 
     fun observeTotalPrice(total: Int, isPlus: Boolean) {

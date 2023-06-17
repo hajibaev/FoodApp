@@ -17,9 +17,3 @@ fun View.hideView() {
     this.visibility = View.GONE
 }
 
-
-fun View.toolbarHideView() {
-    this.visibility = View.GONE
-}
-
-
